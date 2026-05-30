@@ -1,5 +1,5 @@
 // Sin open — no se puede heredar (protección por defecto)
-class Animal(val nombre: String)
+// class Animal(val nombre: String)
 // class Perro : Animal("Rex")  // ERROR — Animal es final
 
 // Con open — la jerarquía está diseñada para ello

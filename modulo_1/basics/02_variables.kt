@@ -2,7 +2,7 @@
 fun main(){
     //Val Inmutable
     val nombre= "Ana"
-    val edad: Init = 28
+    val edad: Int = 28
     //Var mutable
     var contador = 0
     contador = contador + 1
@@ -28,22 +28,22 @@ fun main(){
     val booleano: Boolean = true
     //Caracteres
     val caracter: Char = 'k'
-    val cadena: String = 'Kotlin'
+    val cadena: String = "Kotlin"
     val inferido = "string"
     
-    printIn("Tipo de inferido: ${inferido::class.simpleName}")
+    println("Tipo de inferido: ${inferido::class.simpleName}")
     val inferido1=12
-    printIn("Tipo de inferido: ${inferido1::class.simpleName}")
+    println("Tipo de inferido: ${inferido1::class.simpleName}")
     
     //Utilidades de String
     //Expresiones
-    val primerNombre = "Mateo"
-    val primerApellido = "Alba"
+    val primerNombre = "Allison"
+    val primerApellido = "Solorzano"
     
     val primerNombreMayuscula=primerNombre.uppercase()
     val primerApellidoMayuscula=primerApellido.uppercase()
     
-    printIn("Nombre Completo: ${primerNombreMayuscula} ${primerApellidoMayuscula}")
-    printIn("Nombre Completo: ${primerNombre.uppercase()} ${primerApellido.uppercase()}")
+    println("Nombre Completo: ${primerNombreMayuscula} ${primerApellidoMayuscula}")
+    println("Nombre Completo: ${primerNombre.uppercase()} ${primerApellido.uppercase()}")
 
 }

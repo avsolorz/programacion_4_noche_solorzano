@@ -2,7 +2,7 @@
 fun main(){
     //Val Inmutable
     val nombre= "Ana"
-    val edad: Init = 28
+    val edad: Int = 28
     //Var mutable
     var contador = 0
     contador = contador + 1
@@ -15,6 +15,5 @@ fun main(){
     val numero2: Short = 32_767
     val numero3: Int = 12
     val numero4: Long = 2_222_222_333_222_233
-    -
 
 }

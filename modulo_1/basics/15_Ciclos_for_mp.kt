@@ -12,23 +12,23 @@ fun main(){
         println(i)
     }
     println("listas")
-    val nombres = listOf("Leo", "David", "Leonardo")
-    for (nombre in nombres){
-        println(nombre)
+    val tareas = listOf("Reservar sede", "Contratar catering", "Enviar invitaciones")
+    for (tarea in tareas){
+        println(tarea)
     }
     println("Indice Valor")
-    for ((index, valor) in nombres.withIndex()){
+    for ((index, valor) in tareas.withIndex()){
         println("$index: $valor")
     }
-    
+
     println("break")
     for (i in 1..5){
-        if(i ==3){
+        if(i == 3){
             break
         }
         println(i)
     }
-    
+
     println("continue")
     for (i in 1..5){
         if (i == 3){

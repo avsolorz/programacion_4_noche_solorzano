@@ -1,0 +1,35 @@
+fun main () {
+    println("Set")
+    println("Inmutables")
+    val idParticipantes = setOf(101,102,103,104,105,106,103,104,102,101,101,103)
+    println(idParticipantes)
+    println("Operaciones de conjuntos")
+    val conferencias = setOf("Conferencia A", "Conferencia B", "Conferencia C", "Conferencia D")
+    println("conferencias $conferencias")
+    val talleres = setOf("Taller X", "Taller Y", "Taller Z", "Conferencia A")
+    val patrocinadores = setOf("Taller X", "Conferencia B", "Empresa W")
+    println("Talleres $talleres")
+    println("Union ${talleres union conferencias}")
+    println("Interseccion ${talleres intersect conferencias}")
+    println("Interseccion ${patrocinadores intersect conferencias}")
+    println("Substraccion ${talleres subtract conferencias}")
+    println("Substraccion ${talleres subtract patrocinadores}")
+    println("conferencias $conferencias")
+    println("talleres $talleres")
+
+
+
+    println("Set")
+    println("Mutables")
+    val habilidadesOrganizador = mutableSetOf("Logistica", "Marketing", "Presupuesto")
+    println(habilidadesOrganizador)
+    habilidadesOrganizador.add("Logistica")
+    println(habilidadesOrganizador)
+    habilidadesOrganizador.add("Comunicacion")
+    println(habilidadesOrganizador)
+    habilidadesOrganizador.remove("Presupuesto")
+    println(habilidadesOrganizador)
+    println("Verificar si un valor existe ${"Marketing" in habilidadesOrganizador}")
+    println("Verificar si un valor existe ${"Presupuesto" in habilidadesOrganizador}")
+
+}
