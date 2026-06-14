@@ -23,6 +23,9 @@ sealed class Screen(val route: String) {
     }
     data object Profile : Screen("profile")
 
+    // Staff
+    data object SendNotification : Screen("send-notification")
+
     // Admin
     data object AdminDashboard  : Screen("admin")
     data object AdminCategories : Screen("admin/categories")
