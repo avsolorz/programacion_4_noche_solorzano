@@ -7,6 +7,7 @@ import 'package:modulo06_widgets/widgets/pantalla_contexto.dart';
 import 'package:modulo06_widgets/widgets/reloj.dart';
 import 'package:modulo06_widgets/widgets/servicio_estado.dart';
 import 'widgets/catalogo_basicos.dart';
+import 'widgets/fila_estado.dart';
 
 // ┌──────────────────────────────────────────────────────────────────┐
 // │  Cambia este número y guarda (Ctrl+S) para navegar entre pasos. │
@@ -19,7 +20,7 @@ import 'widgets/catalogo_basicos.dart';
 // │  7  Paso 5   BuildContext                                        │
 // │  8  Paso 6   Composición de widgets                             │
 // └──────────────────────────────────────────────────────────────────┘
-const int paso = 8;
+const int paso = 3;
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -34,18 +35,17 @@ void main() => runApp(MaterialApp(
     1 => const Scaffold(body: Center(child: Saludo())),
     2 => const CatalogoBasicos(),
     3 => const Scaffold(
-      body: Center(
-        child: Wrap(
-          spacing:    12,
-          runSpacing: 8,
-          children: [
-            Etiqueta(texto: 'Activo',    color: Colors.green),
-            Etiqueta(texto: 'Error',     color: Colors.red,    relleno: true),
-            Etiqueta(texto: 'En espera', color: Colors.orange),
-            Etiqueta(texto: 'Crítico',   color: Colors.red,    fontSize: 16, relleno: true),
-            Etiqueta(texto: 'Info',      color: Colors.blue,   fontSize: 11),
-          ],
-        ),
+      body: Column(
+        children: [
+          FilaEstado(nombre: 'nginx-proxy',   detalle: '10.0.0.5 · 45ms',          activo: true),
+          Divider(height: 1),
+          FilaEstado(nombre: 'db-primary',    detalle: '10.0.0.12 · 8ms',           activo: true),
+          Divider(height: 1),
+          FilaEstado(nombre: 'backup-worker', detalle: '10.0.0.30 · sin respuesta', activo: false),
+          Divider(height: 1),
+          FilaEstado(nombre: 'api-gateway-produccion-region-us-east',
+                     detalle: '10.0.0.8 · 12ms', activo: true),
+        ],
       ),
     ),
     4 => const Scaffold(
