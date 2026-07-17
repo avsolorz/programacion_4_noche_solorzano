@@ -1,6 +1,6 @@
 // app/index.tsx — agrega al archivo existente
 
-// ─── Paso 3 — Props opcionales ───────────────────────────────────────
+// ─── Paso 3 — Props opcionalessss ───────────────────────────────────────
 
 type EstadoServidor = 'activo' | 'degradado' | 'inactivo' | 'error'
 
